@@ -1,0 +1,6 @@
+framework module Pods_WhatsAppCloneSwiftUITests {
+  umbrella header "Pods-WhatsAppCloneSwiftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
