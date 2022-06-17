@@ -11,6 +11,9 @@
 		1BD1294B41DB2CC432A2C97D /* Pods_WhatsAppCloneSwiftUI_WhatsAppCloneSwiftUIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9FD0CD7BB1049757EBE315 /* Pods_WhatsAppCloneSwiftUI_WhatsAppCloneSwiftUIUITests.framework */; };
 		7898D276038A871ACCB6C2DF /* Pods_WhatsAppCloneSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB870937C499AE052C0C32B3 /* Pods_WhatsAppCloneSwiftUI.framework */; };
 		C4184395285B6878001640F6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C4184394285B6878001640F6 /* .gitignore */; };
+		C436789C285C8F8700A3BD50 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436789B285C8F8700A3BD50 /* userModel.swift */; };
+		C436789E285C905A00A3BD50 /* userStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436789D285C905A00A3BD50 /* userStore.swift */; };
+		C43678A2285CAED000A3BD50 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43678A1285CAED000A3BD50 /* ChatView.swift */; };
 		C4A52CE62858F50E0032D101 /* WhatsAppCloneSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A52CE52858F50E0032D101 /* WhatsAppCloneSwiftUIApp.swift */; };
 		C4A52CE82858F50E0032D101 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A52CE72858F50E0032D101 /* AuthView.swift */; };
 		C4A52CEA2858F50E0032D101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A52CE92858F50E0032D101 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		ABB3A986E2873401ED986918 /* Pods-WhatsAppCloneSwiftUI-WhatsAppCloneSwiftUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppCloneSwiftUI-WhatsAppCloneSwiftUIUITests.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppCloneSwiftUI-WhatsAppCloneSwiftUIUITests/Pods-WhatsAppCloneSwiftUI-WhatsAppCloneSwiftUIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD5EA4CB54C478879577EBD9 /* Pods-WhatsAppCloneSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppCloneSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsAppCloneSwiftUITests/Pods-WhatsAppCloneSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4184394285B6878001640F6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C436789B285C8F8700A3BD50 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		C436789D285C905A00A3BD50 /* userStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userStore.swift; sourceTree = "<group>"; };
+		C43678A1285CAED000A3BD50 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		C4A52CE22858F50E0032D101 /* WhatsAppCloneSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsAppCloneSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A52CE52858F50E0032D101 /* WhatsAppCloneSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsAppCloneSwiftUIApp.swift; sourceTree = "<group>"; };
 		C4A52CE72858F50E0032D101 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -128,9 +134,12 @@
 			children = (
 				C4A52CE52858F50E0032D101 /* WhatsAppCloneSwiftUIApp.swift */,
 				C4A52CE72858F50E0032D101 /* AuthView.swift */,
+				C436789B285C8F8700A3BD50 /* userModel.swift */,
+				C436789D285C905A00A3BD50 /* userStore.swift */,
 				C4A52D0F2858F5FD0032D101 /* GoogleService-Info.plist */,
 				C4A52CE92858F50E0032D101 /* Assets.xcassets */,
 				C4A52CEB2858F50E0032D101 /* Preview Content */,
+				C43678A1285CAED000A3BD50 /* ChatView.swift */,
 			);
 			path = WhatsAppCloneSwiftUI;
 			sourceTree = "<group>";
@@ -415,6 +424,9 @@
 			files = (
 				C4A52CE82858F50E0032D101 /* AuthView.swift in Sources */,
 				C4A52CE62858F50E0032D101 /* WhatsAppCloneSwiftUIApp.swift in Sources */,
+				C43678A2285CAED000A3BD50 /* ChatView.swift in Sources */,
+				C436789E285C905A00A3BD50 /* userStore.swift in Sources */,
+				C436789C285C8F8700A3BD50 /* userModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
