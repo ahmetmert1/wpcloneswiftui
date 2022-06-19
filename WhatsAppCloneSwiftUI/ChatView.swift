@@ -23,9 +23,16 @@ struct ChatView: View {
         
         VStack{
             
-            List(chatStore.chatArray){ chats in
+            /*List(chatStore.chatArray){ chats in
                 
-                Text(chats.message)
+                ChatRow(chatMessage: chats, userToChatFromChatView: self.userToChat)
+            }*/
+            
+            ScrollView{
+                
+                ForEach(chatStore.chatArray){ chats in
+                    ChatRow(chatMessage: chats, userToChatFromChatView: self.userToChat)
+                }
                 
             }
             

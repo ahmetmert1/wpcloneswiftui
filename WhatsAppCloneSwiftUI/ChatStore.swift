@@ -82,6 +82,10 @@ class ChatStore : ObservableObject {
                                     }
                                 }
                                 
+                                self.chatArray = self.chatArray.sorted(by: {
+                                    $0.messageDate.compare($1.messageDate) == .orderedAscending
+                                })
+                                
                                 self.objectWillChange.send(self.chatArray)
                                 
                             }
