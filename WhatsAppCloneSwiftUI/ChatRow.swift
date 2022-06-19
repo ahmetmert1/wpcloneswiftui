@@ -22,22 +22,24 @@ struct ChatRow: View {
             if chatMessage.messageFrom == Auth.auth().currentUser?.uid && chatMessage.messageTo == userToChatFromChatView.uidFromFirebase {
                 
                 HStack{
+                    Spacer()
                     Text(chatMessage.message)
                         .bold()
                         .foregroundColor(.black)
                         .padding()
                     
-                    Spacer()
+                    
                 }
                 
             }else if chatMessage.messageFrom == userToChatFromChatView.uidFromFirebase && chatMessage.messageTo == Auth.auth().currentUser?.uid{
                 
                 HStack{
-                    Spacer()
+                    
                     Text(chatMessage.message)
                         .bold()
                         .foregroundColor(.black)
                         .padding()
+                    Spacer()
                     
                     
                 }
