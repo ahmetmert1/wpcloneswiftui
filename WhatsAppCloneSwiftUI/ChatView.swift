@@ -6,14 +6,72 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
+import FirebaseAuth
 
 struct ChatView: View {
     
     var userToChat : userModel
+    @State var messageToSend : String = ""
+    @ObservedObject var chatStore = ChatStore()
+    
+    
+    
+    let db = Firestore.firestore()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            
+            List(chatStore.chatArray){ chats in
+                
+                Text(chats.message)
+                
+            }
+            
+            
+            HStack{
+                TextField("Type Here...", text: $messageToSend)
+                    .padding()
+                Button {
+                    //Mesajı yolla fonksiyonu
+                    messageToSendFirebase()
+                } label: {
+                    Text("Send")
+                        .padding()
+                        .foregroundColor(.blue)
+                }
+
+            }
+        }
+        
     }
+    
+    
+    func messageToSendFirebase(){
+        
+        var ref : DocumentReference? = nil
+        
+        var myChatDictionary : [String : Any] = ["chatUserFrom" : Auth.auth().currentUser?.uid, "chatUserTo" : userToChat.uidFromFirebase, "date": generateDate(), "message" : self.messageToSend]
+        
+        ref = self.db.collection("Chats").addDocument(data: myChatDictionary, completion: { (error) in
+            
+            if error != nil{
+                
+            }else{
+                self.messageToSend = ""
+            }
+        })
+        
+    }
+    
+    func generateDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy_MM_dd_hh_mm_ss"
+        return (formatter.string(from: Date()) as NSString) as String
+    }
+    
+    
 }
 
 struct ChatView_Previews: PreviewProvider {
